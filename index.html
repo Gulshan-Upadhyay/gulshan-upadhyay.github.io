@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gulshan | Network Admin & Ethical Hacker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f0f0f0;
+      --text-color: #121212;
+      --accent-color: #0072ff;
+      --header-bg: linear-gradient(90deg, #00c6ff, #0072ff);
+      --card-bg: #ffffff;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --accent-color: #00c6ff;
+      --header-bg: linear-gradient(90deg, #0072ff, #00c6ff);
+      --card-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--header-bg);
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #fff;
+      transition: background 0.3s;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      transition: background 0.3s, box-shadow 0.3s;
+      animation: fadeIn 1s ease;
+    }
+
+    .section h2 {
+      color: var(--accent-color);
+      margin-top: 0;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent-color);
+      border: none;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+      z-index: 999;
+    }
+
+    .toggle-btn:hover {
+      background: #005bb5;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media(max-width:600px){
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+  <header>
+    <h1>Gulshan</h1>
+    <p>Network Admin | Ethical Hacker | Tech Enthusiast</p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>About Me</h2>
+      <p>
+        I am Gulshan, a passionate network administrator and ethical hacker. I specialize in designing secure networks, configuring firewalls, and building ethical hacking labs. I am driven to learn and apply cybersecurity best practices in real-world environments.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Windows Server Administration</li>
+        <li>Firewall Configuration (Sophos XDR, etc.)</li>
+        <li>Network Design & Optimization</li>
+        <li>Ethical Hacking & Penetration Testing</li>
+        <li>Linux (Kali, Ubuntu)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Configured secure network for 200+ users with Sophos XDR & Windows AD</li>
+        <li>Built an ethical hacking lab with Kali Linux and vulnerable VMs</li>
+        <li>Deployed Zabbix & Wazuh for monitoring and security alerts</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>
+        📧 <a href="mailto:yourmail@example.com">yourmail@example.com</a><br>
+        💼 <a href="https://www.linkedin.com/in/yourlinkedin/">LinkedIn Profile</a>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Resume</h2>
+      <p><a href="resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Gulshan | Built with ❤️ on GitHub Pages
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.querySelector('.toggle-btn');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.setAttribute('data-theme', 'light');
+        btn.innerHTML = '🌙 Dark Mode';
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        btn.innerHTML = '☀️ Light Mode';
+      }
+    }
+    // Default to light mode
+    document.body.setAttribute('data-theme', 'light');
+  </script>
+
+</body>
+</html>
