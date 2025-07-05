@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gulshan Upashyay | System & Network Admin</title>
+  <title>Gulshan | Network Admin & Ethical Hacker</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
@@ -26,29 +26,45 @@
 
     header {
       min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1581090700227-1f9d8f6e4ab3?crop=entropy&cs=tinysrgb&fit=crop&h=1080&w=1920') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: white;
       text-align: center;
       padding: 2rem;
-      background-attachment: fixed;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
       font-size: 3rem;
+      color: silver;
       letter-spacing: 2px;
       margin: 0;
-      animation: fadeInDown 1s ease;
+      text-shadow: 0 0 10px rgba(192,192,192,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    header h1:hover {
+      transform: scale(1.05);
     }
 
     header p {
       font-size: 1.2rem;
       margin-top: 1rem;
       opacity: 0.85;
-      animation: fadeInUp 1s ease;
     }
 
     .container {
@@ -61,17 +77,21 @@
       background: var(--card-bg);
       padding: 2rem;
       border-radius: 20px;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       box-shadow: var(--shadow);
       margin: 2rem 0;
       transform: translateY(20px);
       opacity: 0;
-      transition: all 0.6s ease-out;
+      transition: all 0.6s ease-out, box-shadow 0.3s ease;
     }
 
     .section.visible {
       transform: translateY(0);
       opacity: 1;
+    }
+
+    .section:hover {
+      box-shadow: 0 0 20px var(--accent);
     }
 
     .section h2 {
@@ -93,6 +113,7 @@
       display: flex;
       gap: 1rem;
       font-size: 1.5rem;
+      justify-content: center;
     }
 
     .icon {
@@ -103,11 +124,13 @@
       height: 40px;
       border-radius: 50%;
       background: var(--card-bg);
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
+      cursor: pointer;
     }
 
     .icon:hover {
       background: var(--accent);
+      transform: scale(1.1);
     }
 
     footer {
@@ -115,16 +138,6 @@
       padding: 2rem 1rem;
       font-size: 0.8rem;
       opacity: 0.6;
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     @media(max-width: 600px){
@@ -136,8 +149,8 @@
 <body>
 
   <header>
-    <h1>Gulshan Upadhyay</h1>
-    <p>Network Admin | System Admin | Tech Enthusiast</p>
+    <h1>Gulshan</h1>
+    <p>Network Admin | Ethical Hacker | Tech Enthusiast</p>
   </header>
 
   <div class="container">
@@ -162,7 +175,8 @@
     <div class="section">
       <h2>Projects</h2>
       <ul>
-        <li>Secure network for 200+ users with edge cutting technology</li>
+        <li>Secure network for 200+ users with Sophos XDR & AD integration</li>
+        <li>Ethical hacking lab with Kali & vulnerable VMs</li>
         <li>Deployed Zabbix + Wazuh for real-time alerts</li>
       </ul>
     </div>
@@ -170,7 +184,7 @@
     <div class="section">
       <h2>Contact</h2>
       <div class="icons">
-        <a href="mailto:gulshan_upadhyay@outlook.com" class="icon" aria-label="Email">
+        <a href="mailto:yourmail@example.com" class="icon" aria-label="Email">
           📧
         </a>
         <a href="https://www.linkedin.com/in/yourlinkedin/" class="icon" aria-label="LinkedIn" target="_blank">
@@ -186,7 +200,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Gulshan Upadhyay | Crafted with precision
+    &copy; 2025 Gulshan | Crafted with precision
   </footer>
 
   <script>
