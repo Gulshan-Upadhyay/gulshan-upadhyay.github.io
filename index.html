@@ -4,217 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gulshan | Network Admin & Ethical Hacker</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <style>
-    :root {
-      --bg: #0d0d0d;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --accent: #00c6ff;
-      --accent2: #0072ff;
-      --text: #eaeaea;
-      --shadow: 0 8px 32px rgba(0,0,0,0.37);
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    header {
-      min-height: 100vh;
-      background: url('https://images.unsplash.com/photo-1581090700227-1f9d8f6e4ab3?crop=entropy&cs=tinysrgb&fit=crop&h=1080&w=1920') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-    }
-
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      color: silver;
-      letter-spacing: 2px;
-      margin: 0;
-      text-shadow: 0 0 10px rgba(192,192,192,0.5);
-      transition: transform 0.3s ease;
-    }
-
-    header h1:hover {
-      transform: scale(1.05);
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      opacity: 0.85;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    .section {
-      background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-      margin: 2rem 0;
-      transform: translateY(20px);
-      opacity: 0;
-      transition: all 0.6s ease-out, box-shadow 0.3s ease;
-    }
-
-    .section.visible {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .section:hover {
-      box-shadow: 0 0 20px var(--accent);
-    }
-
-    .section h2 {
-      color: var(--accent);
-      margin-top: 0;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: var(--accent2);
-    }
-
-    .icons {
-      display: flex;
-      gap: 1rem;
-      font-size: 1.5rem;
-      justify-content: center;
-    }
-
-    .icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--card-bg);
-      transition: background 0.3s, transform 0.3s;
-      cursor: pointer;
-    }
-
-    .icon:hover {
-      background: var(--accent);
-      transform: scale(1.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.8rem;
-      opacity: 0.6;
-    }
-
-    @media(max-width: 600px){
-      header h1 { font-size: 2rem; }
-      header p { font-size: 1rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav>
+    <div class="logo">Gulshan</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="mailto:yourmail@example.com">Contact</a></li>
+    </ul>
+  </nav>
 
-  <header>
-    <h1>Gulshan</h1>
-    <p>Network Admin | Ethical Hacker | Tech Enthusiast</p>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Gulshan</h1>
+      <p>Network Admin | Ethical Hacker | Cloud & Security Enthusiast</p>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="section">
+  <main>
+    <section class="intro">
       <h2>About Me</h2>
-      <p>
-        I am Gulshan — a network admin and ethical hacker passionate about building secure, high-performance networks. I specialize in cybersecurity, network hardening, and creating resilient digital infrastructures.
-      </p>
-    </div>
+      <p>I am a passionate system and network administrator with experience in designing secure, high-performance network infrastructures, deploying cloud solutions, and conducting security audits.</p>
+    </section>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>Windows Server, Active Directory</li>
-        <li>Sophos XDR & Firewall Management</li>
-        <li>Kali Linux, Ubuntu, Penetration Testing</li>
-        <li>Zabbix, Wazuh Monitoring</li>
-        <li>Network Design & Optimization</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li>Secure network for 200+ users with Sophos XDR & AD integration</li>
-        <li>Ethical hacking lab with Kali & vulnerable VMs</li>
-        <li>Deployed Zabbix + Wazuh for real-time alerts</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Contact</h2>
-      <div class="icons">
-        <a href="mailto:yourmail@example.com" class="icon" aria-label="Email">
-          📧
-        </a>
-        <a href="https://www.linkedin.com/in/yourlinkedin/" class="icon" aria-label="LinkedIn" target="_blank">
-          💼
-        </a>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Resume</h2>
-      <p><a href="resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
-    </div>
-  </div>
+    <section class="quick-links">
+      <a href="skills.html" class="button">View My Skills</a>
+      <a href="projects.html" class="button">View My Projects</a>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Gulshan | Crafted with precision
   </footer>
-
-  <script>
-    // Scroll reveal
-    const sections = document.querySelectorAll('.section');
-    window.addEventListener('scroll', () => {
-      sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 50) {
-          sec.classList.add('visible');
-        }
-      });
-    });
-  </script>
-
 </body>
 </html>
